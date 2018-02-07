@@ -14,7 +14,6 @@
 		B6D66FDE202AE054003C3F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D66FDC202AE054003C3F7B /* LaunchScreen.storyboard */; };
 		B6D66FE9202AE055003C3F7B /* AudioBarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D66FE8202AE055003C3F7B /* AudioBarsTests.swift */; };
 		B6D66FF8202AE214003C3F7B /* AudioBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D66FF7202AE214003C3F7B /* AudioBarsView.swift */; };
-		B6D66FFA202AE2EE003C3F7B /* RecentNArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D66FF9202AE2ED003C3F7B /* RecentNArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		B6D66FE8202AE055003C3F7B /* AudioBarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBarsTests.swift; sourceTree = "<group>"; };
 		B6D66FEA202AE055003C3F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6D66FF7202AE214003C3F7B /* AudioBarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBarsView.swift; sourceTree = "<group>"; };
-		B6D66FF9202AE2ED003C3F7B /* RecentNArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentNArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +86,6 @@
 				B6D66FDC202AE054003C3F7B /* LaunchScreen.storyboard */,
 				B6D66FDF202AE054003C3F7B /* Info.plist */,
 				B6D66FF7202AE214003C3F7B /* AudioBarsView.swift */,
-				B6D66FF9202AE2ED003C3F7B /* RecentNArray.swift */,
 			);
 			path = AudioBars;
 			sourceTree = "<group>";
@@ -208,7 +205,6 @@
 				B6D66FD6202AE054003C3F7B /* ViewController.swift in Sources */,
 				B6D66FF8202AE214003C3F7B /* AudioBarsView.swift in Sources */,
 				B6D66FD4202AE054003C3F7B /* AppDelegate.swift in Sources */,
-				B6D66FFA202AE2EE003C3F7B /* RecentNArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y699PM52F2;
 				INFOPLIST_FILE = AudioBars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabiait.AudioBars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,6 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y699PM52F2;
 				INFOPLIST_FILE = AudioBars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabiait.AudioBars;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,33 +21,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-pZ-qJg" customClass="AudioBarsView" customModule="AudioBars" customModuleProvider="target">
-                                <rect key="frame" x="67" y="279.5" width="240" height="128"/>
+                                <rect key="frame" x="93.5" y="40" width="187.5" height="187.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Ggh-os-kmK"/>
-                                    <constraint firstAttribute="width" constant="240" id="ciP-oq-SUB"/>
+                                    <constraint firstAttribute="width" secondItem="Fpc-pZ-qJg" secondAttribute="height" multiplier="1:1" id="AsM-It-Ibt"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="barCount">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="barGap">
-                                        <real key="value" value="4"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" red="0.94901960780000005" green="0.36862745099999999" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbh-m7-Zgi" customClass="AudioBarsView" customModule="AudioBars" customModuleProvider="target">
+                                <rect key="frame" x="93.5" y="247.5" width="187.5" height="187.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barCount">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barGap">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.98431372549999996" green="0.8980392157" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Fpc-pZ-qJg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4l7-Mh-FOG"/>
-                            <constraint firstItem="Fpc-pZ-qJg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NeM-JD-zmD"/>
+                            <constraint firstItem="Zbh-m7-Zgi" firstAttribute="width" secondItem="Fpc-pZ-qJg" secondAttribute="width" id="6tl-gN-XZe"/>
+                            <constraint firstItem="Zbh-m7-Zgi" firstAttribute="height" secondItem="Fpc-pZ-qJg" secondAttribute="height" id="A53-jI-1Zu"/>
+                            <constraint firstAttribute="width" secondItem="Fpc-pZ-qJg" secondAttribute="width" multiplier="2" id="CyA-h1-oEN"/>
+                            <constraint firstItem="Fpc-pZ-qJg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DTk-hQ-ile"/>
+                            <constraint firstItem="Fpc-pZ-qJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Rbt-jQ-Afz"/>
+                            <constraint firstItem="Zbh-m7-Zgi" firstAttribute="top" secondItem="Fpc-pZ-qJg" secondAttribute="bottom" constant="20" id="tSr-hC-daM"/>
+                            <constraint firstItem="Zbh-m7-Zgi" firstAttribute="centerX" secondItem="Fpc-pZ-qJg" secondAttribute="centerX" id="woo-5H-dYG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="audioBarsView" destination="Fpc-pZ-qJg" id="Ssr-MD-nky"/>
+                        <outlet property="audioBarsView1" destination="Fpc-pZ-qJg" id="QtV-kC-Ujx"/>
+                        <outlet property="audioBarsView2" destination="Zbh-m7-Zgi" id="vqt-fm-wqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

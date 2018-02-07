@@ -10,16 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var audioBarsView: AudioBarsView!
+    @IBOutlet weak var audioBarsView1: AudioBarsView!
+    @IBOutlet weak var audioBarsView2: AudioBarsView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { (_) in
-            let p = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-            print(p)
-            self.audioBarsView.append(power: p)
+            let p1 = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+            print(p1)
+            self.audioBarsView1.append(power: p1)
+            
+            let p2 = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+            print(p2)
+            self.audioBarsView2.append(power: p2)
+
         }
     }
 
